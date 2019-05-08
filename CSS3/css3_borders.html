@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS3 Borders</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <style>
+    /*圆角CSS*/
+    #border{
+        border:2px solid #a1a1a1;
+        padding: 10px 40px;
+        background:#dddddd;
+        width: 300px;
+        border-radius: 15px;
+    }
+
+    #rconers1{
+        border-radius: 25px;                            /*一个值*/
+        border-radius: 25px 0px 30px 25px;              /*四个值*/
+        border-radius: 25px 0px 25px;                   /*三个值*/
+        border-radius: 25px 0px;                        /*两个值*/
+        background: #8AC007;
+        padding: 20px;
+        width: 200px;
+        height: 150px;
+    }
+
+    #rconers2{
+        border-radius: 25px;
+        padding: 20px;
+        width: 200px;
+        height: 150px;
+        border: 2px solid #000000;
+    }
+
+    #rconers3{
+        border-radius: 25px;
+        padding: 20px;
+        width: 200px;
+        height: 150px;
+        background-image: url("images/paper.gif");
+        background-position: left top;
+        background-repeat: repeat;
+    }
+    /*阴影CSS*/
+    #box-shadow{
+        width: 300px;
+        background: yellow;
+        height: 100px;
+        box-shadow: 10px 10px 5px #888888;
+    }
+    /*图片边框CSS*/
+    #round{
+        border: 30px solid transparent;
+        padding: 10px 20px;
+        margin: 20px;
+        width: 250px;
+        -webkit-border-image:url("images/border.png") 30 30 round; /*safari 5 and older*/
+        -o-border-image:url("images/border.png") 30 30 round; /*opera*/
+        border-image: url("images/border.png") 30 30 round; 
+    }
+    #stretch{
+        border: 30px solid transparent;
+        padding: 10px 20px;
+        margin: 20px;
+        width: 250px;
+        -webkit-border-image:url("images/border.png") 30 30 stretch; /*safari 5 and older*/
+        -o-border-image:url("images/border.png") 30 30 stretch; /*opera*/
+        border-image: url("images/border.png") 30 30 stretch; 
+    }
+    </style>
+</head>
+<body>
+    <div id="border">
+        border-radius 属性允许您为元素添加圆角边框!
+    </div><br />
+    <div>
+        <p>border-radius 属性允许向元素添加圆角</p>
+        <p>指定背景颜色元素的圆角</p>
+        <p id="rconers1">圆角</p>
+        <p>指定边框元素的圆角</p>
+        <p id="rconers2">圆角</p>
+        <p>指定图片元素的圆角</p>
+        <p id="rconers3">圆角</p>
+    </div>
+    <div id="box-shadow">
+    </div>
+    <div id="border-image">
+        <p><b>注意:</b> IE浏览器不支持border-image属性.</p>
+        <p>border-image 属性用于设置图片边框</p>
+        <div id="round">这里,图像平铺来填充边框.</div>
+        <div id="stretch">这里,图像被拉伸以填充该区域</div>
+    </div>
+</body>
+</html>

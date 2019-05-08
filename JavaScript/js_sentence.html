@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sentence</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="Num" placeholder="请输入数字">
+        <button id="btn">点击这里</button>
+    </div>
+    <div>
+        <p id="para"></p>
+        <button id="btn_2">点击这里输出汽车名字</button><br />
+        <p id="para_2"></p>
+        <button id="btn_3">点击这里出现人物属性</button>
+    </div>
+    <div>
+        <p id="para_3">这里用于显示数字<br></p>
+        <button id="btn_4">点击这里输出1-99的数字</button><br>
+        <button id="btn_5">点击这里从0-99数字</button>
+    </div>
+    <script>
+        let carname = ["BMW","Volvo","Saab","Toyota","Ford"]
+        let obj = {
+                name: "jhon",
+                age: 18,
+                favourite:["basketball","swimming","running"]
+        }
+        function myfunc_for(){
+            var para = document.getElementById("para");
+            var para_2 = document.getElementById("para_2");
+            var btn = document.getElementById("btn_2");
+            var btn_2 = document.getElementById("btn_3");
+
+            btn.addEventListener("click",function(){
+                for(let i=0;i<carname.length;i++){
+                    para.innerHTML += carname[i]+"\t";
+                }
+            })
+            
+            btn_2.addEventListener("click",function(){
+                for(x in obj){
+                    para_2.innerHTML += "<p>"+x+":\t"+obj[x]+"</p>";
+                }
+            })
+
+        }
+
+        function myfunc_while(){
+            var para = document.getElementById("para_3");
+            var btn = document.getElementById("btn_4");
+            var btn_1 = document.getElementById("btn_5");
+            btn.addEventListener("click",function(){
+                let x = 0;
+                let One_hundred = 100;
+                while (x < One_hundred){
+                    if(x%10 != 0){  
+                        para.innerHTML += x + " ";
+                    }else if(x==0){
+                        x++;
+                        continue;
+                    }else{
+                        para.innerHTML += x + "<br/>"
+                    }
+                    x++;
+                }
+            })
+
+            btn_1.addEventListener("click",function(){
+                let x = 0;
+                let One_hundred = 100;
+                do{
+                    if(x%10 !=0 || x == 0){
+                        para.innerHTML += x + " ";
+                    }else{
+                        para.innerHTML += x + "<br/>";
+                    }
+                    x++;
+                }while(x <One_hundred);
+            })
+        }
+        
+
+        function myfunc(){
+            var val = document.getElementById("Num");
+            var btn = document.getElementById("btn")
+            btn.addEventListener("click",function(){
+                var reg = /^[0-9]*$/;
+                if(!reg.test(val.value) || val.value == ""){
+                    alert("不是数字");
+                }else{
+                    if(val.value > 50){
+                        alert("该数字大于50!");
+                    }else{
+                        alert("该数字小于50!");
+                    }
+                }
+            })
+
+
+        }
+
+        function addLoadEvent(func){
+            var oldonload = window.onload;
+            if(typeof window.onload != "function"){
+                window.onload = func;
+            }else{
+                window.onload = function(){
+                    oldonload();
+                    func();
+                }
+            }
+        }
+
+        addLoadEvent(myfunc);
+        addLoadEvent(myfunc_for);
+        addLoadEvent(myfunc_while);
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pseudo class</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <style>
+    #anchor a:link{
+        color: #000009;
+    }
+    #anchor a:visited{
+        color: #ff00ff;
+    }
+    #anchor a:hover{
+        color: #00ff00;
+    }
+    #anchor a:active{
+        color: #0000ff;
+    }
+
+    #first_child p:first-child{
+        background:rebeccapurple;
+    }
+    #first_child p>b:first-child{
+        font-size: 20px;
+    }
+
+    #first_child .all_firstchild p:first-child i{
+        background-color:#ddff00;
+    }
+    </style>
+</head>
+<body>
+    <div id="anchor">
+        <p><a href="#" target="_blank">这是一个链接</a></p>
+        <p>注意:a:hover必须在a:link和a:visited之后,按照严格顺序才能够看到效果</p>
+        <P>注意:a:active必须在a:hover之后</P>
+    </div>
+
+    <div id="first_child">
+        <p>This is some text.<b>I am strong man. </b><b>I am two.</b></p>
+        <p>This is some text.<b>I am strong man. </b><b>I am two.</b></p>
+        <div class="all_firstchild">
+            <p>This is some text.<i>I am a strong man. </i><i>I am two.</i></p>
+            <p>This is some text.<i>I am a strong man. </i><i>I am two.</i></p>
+        </div>
+    </div>
+</body>
+</html>

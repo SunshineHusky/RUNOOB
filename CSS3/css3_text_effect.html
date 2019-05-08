@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>text-effect</title>
+        <meta http-equiv="X-UA-Comptiable" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <style>
+            h3.text{
+                text-shadow: 5px 5px 5px #000;
+            }
+            #box{
+                width: 200px;
+                height: 150px;
+                background: #ff0000;
+                margin: 10px;
+                padding: 20px;
+                box-shadow: 10px 10px 10px #00ffdd;
+            }
+            #box2{
+                width: 200px;
+                height: 150px;
+                background: #ff0000;
+                margin: 10px;
+                padding: 20px;
+                box-shadow: 10px 10px  #00ffdd;
+            }
+            #card{
+                width: 250px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5),0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                text-align: center;
+            }
+            div.header{
+                background: #4caf50;
+                color: white;
+                padding: 10px;
+                font-size: 30px;
+            }
+            #container{
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3 class="text">Text shadow effects!</h3>
+        <div id="box"></div>
+        <div id="box2"></div>
+        <p>box-shadow 属性用来可以创建纸质样式卡片:</p>
+        <div id="card">
+            <div class="header">
+                    <h1>1</h1>
+            </div>
+            <div class="container">
+                    <p id="date"></p>
+            </div>
+        </div>
+        <script>
+            function Date2(){
+                var date = document.getElementById("date");
+                var date1 = Date();
+                date.innerHTML = date1;
+            }
+            window.onload = Date2();
+        </script>
+    </body>
+</html>

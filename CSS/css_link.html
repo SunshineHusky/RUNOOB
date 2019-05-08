@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>css link</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <style>
+    a:link{
+        color: #000000;  /*未访问链接*/
+        text-decoration: none;
+        background-color: #B2FF99;
+    }
+    a:visited{
+        color:#00FF00;  /*已经访问链接*/
+        text-decoration: none;
+        background-color: #FFFF85;
+    }
+    a:hover{
+        color:#FF00FF;  /*鼠标移动到链接上*/
+        text-decoration: underline;
+        background-color: #FF704D;
+    }
+    a:active{
+        color:#0000FF;  /*鼠标点击链接*/
+        text-decoration: underline;
+        background-color:#FF704D;
+    }
+
+    .style a.one:link{
+        color: #FF0000;
+    }
+    .style a.one:visited{
+        color:#FFCC00;
+    }
+    .style a.one:hover{
+        color:#0000FF;
+    }
+
+    .style a.two:link{
+        color:#FF0000;
+    }
+    .style a.two:visited{
+        color:#FFCC00;
+    }
+    .style a.two:hover{
+        background-color: #66FF66;
+    }
+
+    .style a.three:link{
+        color:#FF0000;
+    }
+    .style a.three:visited{
+        color:#FFCC00;
+    }
+    .style a.three:hover{
+        font-size: 250%;
+    }
+
+    .style a.four:link{
+        color:#FF0000;
+    }
+    .style a.four:visited{
+        color:#FFCC00;
+    }
+    .style a.four:hover{
+        font-family:cursive;
+    }
+
+    .style a.five:link{
+        color:#FF0000;
+    }
+    .style a.five:visited{
+        color:#FFCC00;
+    }
+    .style a.five:hover{
+        text-decoration: underline;
+    }
+    </style>
+</head>
+<body>
+    <p><b><a href="http://www.runoob.com" target="_blank">这是一个指向Runoob的链接.</a></b></p>
+    <p><b>注意:</b>a:hover必须在a:link和a:link之后才能看到效果.</p>
+    <p><b>注意:</b>a:visited必须在a:hover之后</p>
+    <div class="style">
+        <p><a class="one" href="http://www.baidu.com">这个链接改变颜色</a></p>
+        <p><a class="two" href="http://www.baidu.com">这个链接改变背景</a></p>
+        <p><a class="three" href="http://www.baidu.com">这个链接改变字体大小</a></p>
+        <p><a class="four" href="http://www.baidu.com">这个链接改变字体类型</a></p>
+        <p><a class="five" href="http://www.baidu.com">这个链接改变文字修饰</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS Selector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <style>
+    .children>p{
+        background-color: yellow;
+    }
+
+    .nochildren p{
+        background-color: green;
+    }
+    .brother .one+p{
+        background-color: pink;
+    }
+    .follow_up .one~p{
+        background-color:pink;
+    }
+    </style>
+</head>
+<body>
+    <div class="children">
+        <div>
+            在子元素中
+            <p>不在子元素中</p>
+        </div>
+        <p>段落一,在div中</p>   
+        <p>段落二,在div中</p>
+    </div>
+    <div class="nochildren">
+        <div>
+            <p>不在子元素中</p>
+        </div>
+        <p>段落一,在div中</p>
+        <p>段落二,在div中</p>
+    </div>
+    <div class="brother">
+        <p class="one">这是第一个元素</p>
+        <p>这是第二个元素,使用相邻选择器</p>
+        <p>这是第三个元素</p>
+    </div>
+    <div class="follow_up">
+        <p class="one">这是第一个元素</p>
+        <p>这是第二个元素,使用后续元素选择器</p>
+        <p>这是第三个元素,使用后续元素选择器</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Attribute selector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <style>
+    [title]{
+        color: blue;
+    }
+    [title=runoob]{
+        border: 1px solid green;
+        color: aquamarine;
+    }
+    [title~=hello]{
+        color: brown;
+    }
+
+    input[type="text"]{
+        display: block;
+        width: 150px;
+        margin-bottom: 10px;
+        background-color: yellow;
+    }
+    button[type="button"]{
+        width: 120px;
+        margin-left: 40px;
+        display: block;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>We apply to:</h2>
+        <h1 title="Hello World">Hello World</h1>
+        <a title="runoob.com">Runoob.com</a>
+        <hr/>
+        <p title="runoob">Runoob</p>
+        <p title="hello wolld">Yes it is</p>
+        <p title="hello china">NO it isn't</p>
+        <hr/>
+        <form name="input" action="#" method="POST">
+            <input type="text" name="fname" value="Peter" size="20">
+            <input type="text" name="Lname" value="Walker" size="20">
+            <button type="button" value="Example Button">Example Buttion</button>
+        </form>
+
+    </div>
+</body>
+</html>

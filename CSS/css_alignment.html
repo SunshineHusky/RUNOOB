@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS Alignment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <style>
+    div.margin_auto{
+        margin: auto;
+        width: 50%;
+        border: 1px solid #73ad21;
+        padding: 10px;
+    }
+
+    div.text_align{
+        text-align:center;
+        border:1px solid #73ad21;
+        padding: 10px;
+        /* width: 50%;  */
+    }
+    .nooverflow{
+        border: #73ad21 2px dotted;
+        padding: 10px;
+    }
+    .nooverflow img{
+        float: right;
+    }
+    .overflow{
+        overflow: auto;
+        border: #73ad21 2px dotted;
+        margin-top: 10px;
+        padding: 10px;
+    }
+    .overflow img{
+        float: right;
+    }
+
+    .Padding{
+        text-align: center;
+    }
+    .Padding p{
+        padding:50px;
+        border: 1px solid greenyellow;
+    }
+
+    .Line_Height{
+        text-align: center;
+    }
+    .Line_Height p{
+        vertical-align: center;
+        line-height: 40px;
+        border: 1px dashed blueviolet;
+    }
+    </style>
+</head>
+<body>
+    <h2>元素居中对齐</h2>
+    <p>水平居中块级元素可以使用margin:auto</p>
+    <div class="margin_auto">
+        <p>注意,使用marign:auto无法兼容IE,除非!DOCTYPE已经申明.</p>
+    </div>
+    <hr />
+    <p>文本居中对齐</p>
+    <div class="text_align">
+        <p>文本居中对齐,元素大小不变</p>
+    </div>
+    <div>
+        <div class="nooverflow">
+            <img src="images/pineapple.jpg">
+            <p>菜鸟教程,学的不仅是技术,而是梦想!</p>
+        </div>
+        <p style="clear:right;">通过在父元素上添加overflow:auto来解决问题.</p>
+        <div class="overflow">
+            <img src="images/pineapple.jpg">
+            <p>菜鸟教程,学的不仅是技术,而是梦想!</p>
+        </div>
+    </div>
+    <div class="Padding">
+        <p>我是垂直居中,使用padding</p>
+    </div>
+    <div class="Line_Height">
+            <p>我是垂直居中,使用lineheight</p>
+        </div>
+</body>
+</html>

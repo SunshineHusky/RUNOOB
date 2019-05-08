@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>css font</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="">
+        <script></script>
+        <style>
+        #font_family{
+            border: 1px solid black;
+            margin: 10px 5px;
+        }
+        #font_family h1{
+            text-transform: capitalize;
+        }
+        #font_family .serif{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #font_family .sans_serif{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #font_family .monospace{
+            font-family: monospace;
+        }
+        #font_family .cursive{
+            font-family:cursive;
+        }
+        #font_family .fantasy{
+            font-family:fantasy;
+        }
+
+        #font_size .h1{
+            font-size: 250%;
+        }
+        #font_size .h2{
+            font-size: 200%;
+        }
+
+        #font_style .noraml{
+            font-style: normal;
+        }
+        #font_style .italic{
+            font-style: italic;
+        }
+        #font_style .oblique{
+            font-style:oblique;
+        }
+
+        #font_variant .normal{
+            font-variant:normal
+        }
+        #font_variant .small{
+            font-variant: small-caps;
+        }
+
+        #font_weight{
+            border: 2px dotted blue
+        }
+        #font_weight .bold{
+            font-weight: bold;
+        }
+        #font_weight .bold_1{
+            font-weight: 400;
+        }
+        #font_weight .bolder{
+            font-weight:bolder;
+        }
+        #font_weight .bolder_1{
+            font-weight:700;
+        }
+        #font_weight .thicker{
+            font-weight:900;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="font_family">
+            <h1>css font-family</h1>
+            <p class="serif">这一段的字体是 Times New Roman.</p>
+            <p class="sans_serif">这一段字体是Arial</p>
+            <p class="monospace">这一段字体是monospace</p>
+            <p class="cursive">这一段字体是cursive</p>
+            <p class="fantasy">这一段字体是fantasy</p>
+        </div>
+
+        <div id="font_size">
+            <h1>这是heading 1.</h1>
+            <p class="h1">这是heading 1 p元素模仿.</p>
+            <h2>这是heading 2.</h2>
+            <p class="h2">这是heading 2 p元素模仿.</p>
+            <p>这是paragraph.</p>
+        </div>
+
+        <div id="font_style">
+            <p class="normal">这是一个段落,正常.</p>
+            <p class="italic">这是一个段落,斜体.</p>
+            <p class="oblique">这是一个段落,斜体.</p>
+        </div>
+
+        <div id="font_variant">
+            <p class="normal">My name is Mike.</p>
+            <p class="small">My name is Mike.</p>
+        </div>
+
+        <div id="font_weight">
+            <p class="bold">My grilfriend in my dream.</p>
+            <p class="bold_1">My grilfriend in my dream.</p>
+            <p class="bolder">I am from China,GuangDong,ZhongShan.</p>
+            <p class="bolder_1">I am from China,GuangDong,ZhongShan.</p>
+            <p class="thicker">I am from China,GuangDong,ZhongShan.</p>
+        </div>
+    </body>
+</html>

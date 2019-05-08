@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3D transform</title>
+    <style>
+    #rotate{
+        width: 100px;height: 100px;background-color: red;border: 1px solid black;
+    }
+    #rotate:hover{
+        /* transform: rotateX(120deg); */
+        /* transform: rotateY(120deg); */
+        transform: rotateZ(120deg);
+    }
+
+    .run div{
+        position: relative;
+        width: 100px;
+        height: 70px;
+        background-color: red;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid black;
+        float: left;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="rotate">Hello this is a div element!</div>
+    <div class="run">
+        <div id="rotate_2d" onmouseover="Rotate2d()">2D rotate</div>
+        <div id="rotate_3d" onmouseover="Rotate3d()">3d rotate</div>
+    </div>
+    <script>
+    var x,y,n=0,ny=0,rotINT,rotYINT;
+
+    // function Rotate2d(){
+    //     var x= document.getElementById("rotate_2d");
+    //     clearInterval(rotINT);
+    //     rotINT = setInterval(function(){
+    //         n+=1;
+    //         x.style.transform = "rotate("+ n +"deg)";
+    //         if(n==180 || n==360){
+    //             clearInterval(rotINT);
+    //             if(n==360){
+    //                 n=0;
+    //             }
+    //         }
+    //     },10);
+    // }
+
+    function Rotate2d(){
+        x = document.getElementById("rotate_2d");
+        clearInterval(rotINT);
+        rotINT = setInterval(function(){
+            startRotate();
+        },10);
+    }
+
+    function Rotate3d(){
+        var y = document.getElementById("rotate_3d");
+        clearInterval(rotYINT);
+        rotYINT = setInterval(function(){
+            n+=1;
+            y.style.transform = "rotateY("+n+"deg)";
+            if(n==180 || n==360){
+                clearInterval(rotYINT);
+                if(n==360){
+                    n=0;
+                }
+        }
+    },10);
+    }
+
+    function startRotate(){
+        n=n+1;
+        // x.style.transform="rotate(+n +'deg')";
+        x.style.transform="rotate(" + n + "deg)"
+        // x.style.webkitTransform="rotate(" + n + "deg)"
+        // x.style.OTransform="rotate(" + n + "deg)"
+        // x.style.MozTransform="rotate(" + n + "deg)"
+        if(n==180 || n==360){
+            clearInterval(rotINT);
+            if(n==360){
+                n=0;
+            }
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>H5-WebSQL</title>
+        <meta http-equiv="X-UA-Comptialbe" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/websql.css">
+    </head>
+    <body>
+        <header>
+            <h3>webSQL</h3>
+        </header>
+        <section>
+            <div id="localSQL">
+                <p>localStorage</p>
+                <button type="button" id="localcount">点我</button>
+                <p id="localcountdisplay">显示计数位置,关闭浏览器还记得计数!!!</p>
+            </div>
+
+            <div id="session">
+                <p>sessionStorage</p>
+                <input type="button" id="sessioncount" value="点我(session)">
+                <p id="sessioncountdisplay">显示计数位置(session),关闭浏览器则忘记计数</p>
+            </div>
+
+        </section>
+        <script src="js/websql.js"></script>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Interface</title>
+    <style>
+    div{
+        margin: 10px;
+    }
+    div.resize{
+        width: 200px;
+        height: 100px;
+        border: 1px solid black;
+        resize: both;
+        background: #fdffff;
+        overflow: auto;
+    }
+    div.box1{
+        padding: 10px;
+        width: 200px;
+        height: 100px;
+        border: 10px solid black;
+        background: yellowgreen;
+        box-sizing: content-box;
+    }
+    div.box2{
+        padding: 10px;
+        width: 200px;
+        height: 100px;
+        border: 10px solid black;
+        background: yellowgreen;
+        box-sizing: border-box;
+    }
+    .outside{
+        height: 100px;
+        width: 200px;
+        border: 1px solid black;
+        padding: 10px;
+        outline: 15px dotted yellow;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <p><b>注意:</b>Firefox,safari,Chrome兼容resize属性.</p>
+        <div class="resize">
+            这是一段文字,该Div元素可以由用户调整大小.
+        </div>
+        <div>
+            <p>这是两个盒子,一个为content-box,另一个为border-box.</p>
+            <div class="box1">
+                content-box,上下左右都多40px
+            </div>
+            <div class="box2">
+                border-box
+            </div>
+        </div>
+        <div>
+            <div class="outside">
+                这个div外部又一个15px距离的轮廓边界
+            </div>
+        </div>
+    </div>
+</body>
+</html>

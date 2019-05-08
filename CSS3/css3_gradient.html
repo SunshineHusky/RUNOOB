@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3 Gradient</title>
+    <style>
+    h3{
+        margin: 20px;
+    }
+    #grad1{
+        height: 300px;
+        background:linear-gradient(red,yellow,blue);
+    }
+
+    #grad2{
+        height: 300px;
+        background: linear-gradient(to right,black,blue 30%,red);
+    }
+    #grad3{
+        height: 300px;
+        background: linear-gradient(to right bottom,blue,red 70%,yellow);
+    }
+    #grad4{
+        height: 300px;
+        background: linear-gradient(30deg,yellow,green 20%,blue);
+    }
+    #grad5{
+        height: 300px;
+        background: linear-gradient(45deg,rgba(255,0,0,0),rgba(255,0,0,1))
+    }
+    #grad6{
+        height: 300px;
+        background: repeating-linear-gradient(90deg,red 10%,yellow 15%)
+    }
+    #grad7{
+        height: 300px;
+        background: radial-gradient(yellow,blue,green);
+        border-radius: 110px;
+    }
+    #grad8{
+        height: 300px;
+        background: radial-gradient(circle,yellow,blue,green);
+    }
+    #grad9{
+        height: 300px;
+        background: -webkit-radial-gradient(60% 55%, farthest-side,blue,green,yellow,black);
+    }
+    #grad10{
+        height: 300px;
+        background: repeating-radial-gradient(circle,rgba(155,0,0,0) 10%,rgba(155,0,0,1) 20%);
+    }
+    </style>
+</head>
+<body>
+    <h3>线性渐变-从上到下</h3>
+    <p>从顶部开始的颜色渐变.起点是红色,中间是黄色,终点是蓝色</p>
+    <div id="grad1"></div>
+    <h3>线性渐变-从左至右</h3>
+    <p>从左边开始颜色渐变.起点是黑色,中间是蓝色,终点是红色</p>
+    <div id="grad2"></div>
+    <h3>线性渐变,对角</h3>
+    <p>从左上到右下渐变.起点是蓝色,中间是红色,终点是黄色</p>
+    <div id="grad3"></div>
+    <h3>线性渐变,使用角度</h4>
+    <p>从左下到右上30°渐变.起点是黄色,中间是绿色,终点是蓝色</p>
+    <div id="grad4"></div>
+    <h3>线性渐变,使用透明度</h3>
+    <p>使用rgba透明度,0表示完全透明,1表示不透明</p>
+    <div id="grad5"></div>
+    <h3>线性渐变,重复</h3>
+    <p>使用百分比长度实现重复渐变</p>
+    <div id="grad6"></div>
+    <h3>径向渐变</h3>
+    <div id="grad7"></div>
+    <h3>圆形径向渐变</h3>
+    <div id="grad8"></div>
+    <h3>圆形不在圆心的径向渐变</h3>
+    <div id="grad9"></div>
+    <h3>重复的径向渐变</h3>
+    <div id="grad10"></div>
+</body>
+</html>

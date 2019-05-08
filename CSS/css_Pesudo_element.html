@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pesudo Element</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <style>
+    .first_line p::first-line{
+        background-color:#ff00dd;
+    }
+    .first_letter p::first-letter{
+        background-color:#ddff00;
+    }
+    .first_line p::before{
+        content:"<p>你是一头</p>";
+    }
+    .first_letter p::after{
+        display: block;
+        border: #ddff00 1px solid;
+        content:url("images/paper.gif");
+    }
+    </style>
+</head>
+<body>
+    <div class="first_line">
+        <p>
+            你可以向文本的首行设置特殊样式.你可以向文本的首行设置特殊样式.你可以向文本的首行设置特殊样式.
+            你可以向文本的首行设置特殊样式.你可以向文本的首行设置特殊样式.你可以向文本的首行设置特殊样式.
+            你可以向文本的首行设置特殊样式.你可以向文本的首行设置特殊样式.你可以向文本的首行设置特殊样式.
+            你可以向文本的首行设置特殊样式.你可以向文本的首行设置特殊样式.你可以向文本的首行设置特殊样式.
+        </p>
+    </div>
+    <div class="first_letter">
+        <p>Give this paragraph first letter a color.</p>
+    </div>
+</body>
+</html>

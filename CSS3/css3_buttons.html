@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3 Button</title>
+    <style>
+    button{
+        margin: 10px 2px;
+        cursor: pointer;
+    }
+    .button1{
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align:center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+    .button2{
+        border-radius: 10px;
+    }
+    .button3{
+        border-radius: 50%;
+    }
+    #button2 button{
+        width: 100px;
+        background: #4caf50;
+        border: 3px solid white;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        font-size: 20px;
+        border-radius: 20px;
+        transition: 0.5s;
+        box-sizing: border-box;
+    }
+    #button2 :nth-child(2){
+        background: blue;
+    }
+    #button2 :nth-child(3){
+        background: red;
+    }
+    #button2 :nth-child(4){
+        background: yellow;
+    }
+    #button2 :nth-child(5){
+        background: purple;
+    }
+    #button2 button span::after{
+        content: "»";
+        position: absolute;
+        opacity: 0;
+        right: 0px;
+        transition: 0.5s;
+        font-size: 20px;
+    }
+    #button2 button:hover{
+        background: white;
+        color: black;
+        border: #4caf50 3px solid;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+    #button2 button:hover span::after{
+        opacity: 1;
+        right: 10px;
+    }
+    #button2 :nth-child(2):hover{
+        border: blue 3px solid;
+    }
+    #button2 :nth-child(3):hover{
+        border: red 3px solid;
+    }
+    #button2 :nth-child(4):hover{
+        border: yellow 3px solid;
+    }
+    #button2 :nth-child(5):hover{
+        border: purple 3px solid;
+    }
+    </style>
+</head>
+<body>
+    <div id="button1">
+        <button>默认按钮</button>
+        <br/>
+        <button class="button1" type="button">CSS按钮</button>
+        <br />
+        <button class="button1 button2" type="button">圆角按钮</button>
+        <br />
+        <button class="button1 button3" type="button">50%圆角按钮</button>
+    </div>
+    <div id="button2">
+        <button><span>绿</span></button>
+        <button><span>蓝</span></button>
+        <button><span>红</span></button>
+        <button><span>黄</span></button>
+        <button><span>紫</span></button>
+    </div>
+</body>
+</html>

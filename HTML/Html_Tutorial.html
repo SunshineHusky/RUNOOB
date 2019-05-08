@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  <!--为网页定义渲染方式,使用最高版本IE进行渲染-->
+    <title>HTML Tutorial</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"> <!--移动端兼容-->
+    <meta name="keyword" content="HTML,Runoob">  <!--为网页定义搜索关键词-->
+    <meta name="description" content="Tutorial">  <!--为网页定义描述-->
+    <meta name="author" content="Sam He">  <!--定义网页作者-->
+    <!-- <meta http-equiv="refresh" content="30">  定义30秒刷新网页 -->
+    <link rel="stylesheet" type="text/css" href="css/index.css"> <!--链接一个外部样式表-->
+    <script src="js/"></script> <!--链接一个外部JS脚本-->
+    <style>
+        /*内部样式表*/
+        .H1{
+            color: aquamarine;
+        }
+
+        .p1{
+            color: red;
+        }
+
+        th,td{
+            border:1px solid #000;
+            text-align:center;
+            vertical-align: top;
+        }
+    </style>
+    </head>
+    <body>
+        <h1 class="H1">我的第一个段落</h1>
+        <p class="p1">我的第一个段落</p>
+        <br />
+        <div>
+            <h1>这是一个标题</h1>
+            <h2>这是一个标题</h2>
+            <h3>这是一个标题</h3>
+            <h4>这是一个标题</h4>
+            <h5>这是一个标题</h5>
+            <h6>这是一个标题</h6>
+            <br/>
+            <a href="http://www.runoob.com" target="blank" style="text-decoration:none /*内联样式表*/">这是一个链接</a>
+            <a href="http://www.runoob.com/html/html-links.html#ad-336280" target="blank">指向菜鸟教程指定部分</a>
+            <br/>
+            <a href="#tips">指向一个有用的提示部分</a>
+            <br/>
+            <img src="images/logo.png" width="258px" height="39px" title="Runoob"> <!--这是一个静态图-->
+            <img src="images/hackanm.gif" width="48px" height="48px" title="hackanm" alt="computer man"> <!--这是一个动态图,插入方式同静态图-->
+
+            <!--这是一个注释-->
+            <hr/>
+            <p>上面和下面是一条水平线</p>
+            <hr/>
+            <br/>
+            <p>这个<br/>段落<br/>演示了分行<br/></p>
+        </div>
+        <div>
+            <h1>文本格式化</h1>
+            <b>加粗文本</b>
+            <i>斜体文本</i>
+            <code>电脑自动输出</code>
+            这是<sub>下标</sub>和<sup>上标</sup>
+            <em>这个是斜体并强调</em>
+            <small>这个文本是缩小的</small>
+            <strong>这个文本是加重的</strong>
+            <br/>
+            <p>这个文本包含<ins>插入字</ins>和<del>删除字</del></p>
+            <pre>
+                本段代码用于表示
+                空行   空格
+                的预格式文本.
+            </pre>
+            <p>此文本用于定义缩写<abbr title="World Health Orgranization">WHO</abbr></p>
+            <address>中国广东深圳龙岗区坂田街道居里夫人大道华为总部</address>
+            <p><bdo dir="rtl">本段文字从右向左显示!</bdo></p>
+            <blockquote>本段用于
+                定义长的应用,并且是块级元素.
+            </blockquote>
+            <p>本段来自于<q>战国策</q></p>
+            <p><cite>The Scream </cite>by Edward Munch. Painted in 1893.</p>
+        </div>
+        <p id="tips">这是一个有用的提示部分!</p>
+        <div id="SomePic">
+            <p>这是一些文本.<img src="images/smiley.gif" alt="smile face">这是一些文本</p>
+            <p>这是一些文本.<img src="images/smiley.gif" alt="smile face" width="100px" height="50px" hidden>这是一些文本</p>
+            <p>这是一些文本.<img src="images/smiley.gif" alt="smile face" class="float">这是一些文本</p>
+        </div>
+        <div id="table">
+            <table style="margin:5px; border:1px solid black">
+                <tr>
+                    <th>Header1</th>
+                    <th>Header2</th>
+                </tr>
+                <tr>
+                    <td colspan="2">row1,cell1-2</td>
+                </tr>
+                <tr>
+                    <td>row2,cell1</td>
+                    <td>row2,cell2</td>
+                </tr>
+            </table>
+            <table style="margin:5px; border:1px solid black">
+                <tr>
+                    <th rowspan="2">Header1</th>
+                    <td>row1,cell2</td>
+                </tr>
+                <tr>
+                    <td>row2,cell2</td>
+                </tr>
+                <tr>
+                    <th>Header3</th>
+                    <td>row3,cell2</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <p>这是一个段落</p>
+                        <p>这是另一个段落</p>
+                    </td>
+                    <td>
+                        <p>这个单元格包含一个表格</p>
+                        <table>
+                            <tr>
+                                <th colspan="2">header</th>
+                            </tr>
+                            <tr>
+                                <td>row1,cell1</td>
+                                <td>row1,cell2</td>
+                            </tr>
+                            <tr>
+                                <td>row2,cell1</td>
+                                <td>row2,cell2</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>这个单元格包含一个列表</p>
+                        <ul>
+                            <li>apple</li>
+                            <li>bananas</li>
+                            <li>pineapples</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <h1>Hello</h1>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="list">
+            <ul style="list-style-type: square;">无序列表
+                <li>第一个列表项目</li>
+                <ol type="A">
+                    <li>第一个子项目</li>
+                    <li>第二个子项目</li>
+                </ol>
+                <li>第二个列表项目</li>
+                <li>第三个列表项目</li>
+            </ul>
+        </div>
+        <div class="list">
+            <ol type="I">有序列表
+                <li>第一个列表项目</li>
+                <li>第二个列表项目</li>
+                <li>第三个列表项目</li>
+            </ol>
+        </div>
+        <div class="list">
+            <dd>
+                <dt>--第一个自定义列表项目</dt>
+                <dt>--第二个自定义列表项目</dt>
+                <dt>--第三个自定义列表项目</dt>
+            </dd>
+        </div>
+        <br>
+        <div id="divlayout">
+            <div class="container" style="width:400px;">
+                <div class="header" style="background-color:#FFA500;">
+                    <h1 style="margin-bottom:0;">主要的网页标题</h1></div>
+                </div>
+                <div class="menu" style="float:left; background-color:#FFD700; height: 200px; width: 100px;">
+                    <p>菜单</p>
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>JavaScript</p>
+                </div>
+                <div class="content" style="background-color:#EEEEEE; width:400px; height: 200px;">
+                    主要内容显示在这里
+                </div>
+                <div class="footer" style="background-color:#FFA500; text-align:center; clear: both; width:400px;">
+                    版权©Runoob.com54
+                </div>
+            </div>
+        <div id="tablelayout" style="margin-top:20px;">
+            <table style="width:400px;" cellspacing="0" >
+                <tr><th colspan="2" style="background-color:#FFA500; height:50px;">主要的网页标题</th></tr>
+                <tr>
+                    <td style="width:100px; background-color:#FFD700;">
+                        <p>菜单</p>
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>JavaScript</p>
+                    </td>
+                    <td style="width:300px; background-color:#EEEEEE;">
+                        主要内容
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2" style="background-color:#FFA500; ">版权©Runoob.com54</th>
+                </tr>
+            </table>
+        </div>
+        <div id="form">
+            <form action="">
+                <fieldset>
+                <legend>用户信息</legend>
+                <!--text和password的value属性代表输入框的初始值-->
+                <label for="firstName">First Name: </label>
+                <input type="text" name="firstName" value="Sam" id="firstName"><br>
+                <label for="lastname">Last Name: </label>
+                <input type="text" name="LastName" value="He" id="lastname"><br>
+                <label for="PassWord">PassWord: </label>
+                <input type="password" name="PassWord" value="123456" id="PassWord"><br>
+                </fieldset>
+
+                <!--单选和多选元素value属性是必须的,代表选择的值,实际发送到后台的值-->
+                <fieldset>
+                <legend>单选按钮和多选按钮</legend>
+                <label for="male">male</label>
+                <input type="radio" name="sex" value="male" id="male"><br>
+                <label for="female">female</label>
+                <input type="radio" name="sex" value="female" id="female"><br>
+
+                <input type="checkbox" name="Fruits" value="apple" id="apple">
+                <label for="apple">apple</label><br>
+                <input type="checkbox" name="Fruits" value="banana" id="banana">
+                <label for="banana">banana</label><br>
+                <input type="checkbox" name="Fruits" value="orange" id="orange">
+                <label for="orange">orange</label><br>
+                </fieldset>
+                <fieldset>
+                <legend>button和submit按钮,下拉列表,文本域</legend>
+                <input type="button" value="点击">
+                <input type="submit" value="提交">
+
+                <select name="Municipality directly under the Central Government">
+                    <option>北京</option>
+                    <option>天津</option>
+                    <option selected>重庆</option>
+                    <option>上海</option>
+                </select>
+
+                <textarea cols="20" rows="10">
+                    我是一个文本框
+                </textarea>
+                </fieldset>
+            </form>
+            <div id="iframe">
+                <iframe src="http://www.runoob.com/" width="500px" height="400px" frameborder="0" name="iframe_a"></iframe>
+                <p><a href="http://www.baidu.com/" target="iframe_a">www.baidu.com</a></p>
+            </div>
+            <div id="Script">
+                内容显示区
+            </div>
+            <script>
+                document.write("Hello World!")
+            </script>
+            <noscript>抱歉,你的游览器不支持JavaScript!</noscript>
+        </div>
+    </body>
+</html>
+
+

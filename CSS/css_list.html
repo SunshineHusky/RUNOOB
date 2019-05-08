@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>css html</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <style>
+    #disorder_list .a{
+        list-style-type: circle;
+    }
+    #disorder_list .b{
+        list-style-type: square;
+    }
+    #disorder_list .c{
+        list-style-image:url("images/sqpurple.gif")
+    }
+    /* 兼容主流浏览器的代码 */
+    #disorder_list .d{
+        list-style-type: none;
+        padding: 22px;
+    }
+    #disorder_list .d li{
+        background-image: url("images/sqpurple.gif");
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+        padding-left: 10px;
+    }
+    #order_list .a{
+        list-style-type: lower-roman;
+    }
+    #order_list .b{
+        list-style-type: upper-alpha;
+    }
+    #order_list .c{
+        list-style: upper-latin url("images/sqpurple.gif") inside;
+    }
+    </style>
+</head>
+<body>
+    <div id="disorder_list">
+        <ul class="a">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+        </ul>
+        <ul class="b">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+        </ul>
+        <ul class="c">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+        </ul>
+        <hr />
+        <p>下面为兼容主流浏览器的代码</p>
+        <ul class="d">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca cola</li>
+        </ul>
+    </div>
+
+    <div id="order_list">
+        <ul class="a">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+        </ul>
+        <ul class="b">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+        </ul>
+        <ul class="c">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex box</title>
+    <style>
+    #box1{
+        display: flex;
+        /* flex-direction: row-reverse; */
+        /* flex-direction: column; */
+        /* flex-direction:column-reverse; */
+        /* justify-content: flex-start; */
+        /* justify-content: flex-end; */
+        /* justify-content: center; */ /*居中方式 */
+        /* justify-content: space-between; */
+        /* justify-content: space-around; */
+        /* align-items: stretch; */
+        /* -webkit-align-items: stretch; */
+        /* align-items: baseline; */
+        /* align-items: flex-end; */
+        /* align-items: center;     */
+        /* flex-wrap: wrap; */
+        /* align-content: center; */
+        align-content: space-around;
+        width: 600px;
+        height: 250px;
+        background: #ddff22;
+    }
+    .box1{
+        width: 100px;
+        /* height: 80px; */
+        background: #ff2211;
+        /* margin: 10px; */
+        flex: 1;
+    }   
+    .box1:first-child{
+        margin-right: auto;
+        flex: 1;
+    }
+    .box1:nth-child(2){
+        margin-top: auto;
+    }
+    .box1:nth-child(3){
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    </style>
+</head>
+<body>
+    <div id="box1">
+        <div class="box1">flex item1</div>
+        <div class="box1">flex item2</div>
+        <div class="box1">flex item3</div>
+        <div class="box1">flex item4</div>
+        <div class="box1">flex item5</div>
+        <div class="box1">flex item6</div>
+        <div class="box1">flex item7</div>
+        <div class="box1">flex item8</div>
+    </div>
+</body>
+</html>

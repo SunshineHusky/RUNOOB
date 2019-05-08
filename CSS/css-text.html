@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>css-text</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="">
+    <script src=""></script>
+    <style>
+    h1{
+        color:green;
+    }
+    body{
+        color:red;
+    }
+    p.ex{
+        color:blue;
+    }
+    #align{
+        color:black;
+    }
+    #align h1{
+        text-align:center;
+    }
+    #align .date{
+        text-align:right;
+    }
+    #align .main{
+        text-align:justify;
+    }
+    #align .justify{
+        text-align:justify;
+    }
+    #align .justify label{
+        float: left;
+        height:30px;
+        width: 100px;
+        line-height: 30px;
+    }
+    #align .justify label::after{
+        content: "";
+        height: 0;
+        overflow: hidden;
+        display: inline-block;
+        width: 100%;
+    }
+
+    #align a{
+        text-decoration: none;
+    }
+
+    #align .decoration h1{
+        text-decoration:overline;
+    }
+
+    #align .decoration h2{
+        text-decoration:line-through;
+    }
+    #align .decoration h3{
+        text-decoration:underline;
+    }
+
+    #align .Controltext .upper{
+        text-transform:uppercase;
+    }
+    #align .Controltext .lower{
+        text-transform:lowercase;
+    }
+    #align .Controltext .capitalize{
+        text-transform:capitalize;
+    }
+
+    #indent{
+        text-indent: 50px;  
+        letter-spacing: 1;
+        line-height: 0.8;
+    }
+    #indent .rtl{
+        direction: rtl;
+    }
+    #indent .wordspace{
+        word-spacing: 10px;
+    }
+    #indent .nowrap{
+        /*处理空白符*/
+        white-space: nowrap;
+    }
+    #indent .pre{
+        white-space: pre-wrap;
+    }
+    </style>
+</head>
+<body>
+    <h1>这是标题1</h1>
+    <p>这是一个普通的段落.注意,本文是红色的.页面中定义默认的文本选择器.</p>
+    <p class="ex">这是一个类"ex"的文本,这个文本是蓝色的</p>
+    <div id="align">
+        <h1>CSS text-align 实例</h1>
+        <p class="date">2015 年 3 月 14 号</p>
+        <p class="main">“当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界，我将目光缩短了些，
+            决定只改变我的国家；当我进入暮年以后，我发现我不能够改变我们的国家，我的最后愿望仅仅是改变一下我的家庭，
+            但是，这也不可能。当我现在躺在床上，行将就木时，我突然意识到：如果一开始我仅仅去改变我自己，
+            然后，我可能改变我的家庭；在家人的帮助和鼓励下，我可能为国家做一些事情；然后，谁知道呢?我甚至可能改变这个世界。”
+        </p>
+        <p>链接到:<a href="http://www.baidu.com">百度</a></p>
+        <div class="decoration">
+            <h1>This is heading 1.</h1>
+            <h2>This is heading 2.</h2>
+            <h3>This is heading 3.</h3>
+        </div>
+        <div class="Controltext">
+            <p class="upper">This is some text.</p>
+            <p class="lower">This is some text.</p>
+            <p class="capitalize">This is some text.</p>
+        </div>
+        <div class="justify">
+            <label for="name">姓名</label>
+            <input type="text" name="name"><br><br>
+            <label for="location">居住地区</label>
+            <input type="text" nmae="location">
+        </div>
+        <p>重置浏览器窗口查看"justify"是如何工作的</p>    
+    </div>
+    <div id="indent">
+        <p>In my younger and more vulnerable years my father gave me some advice 
+            that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' 
+            he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'</p>
+        <p>一些文本的默认书写方向!</p>
+        <p class="rtl">一些文本从右向左方向!</p>
+        <p class="wordspace">Add wordspace in this paragraph.</p>
+        <p class="nowrap">这是一些文本。
+            这是一些文本。这是一些文本。这是一些文本。这是一些文本。 
+            这是一些文本。这是一些文本。这是一些文本。这是一些文本。
+            这是一些文本。 这是一些文本。这是一些文本。这是一些文本。
+            这是一些文本。这是一些文本。 这是一些文本。这是一些文本。
+            这是一些文本。这是一些文本。这是一些文本。 这是一些文本。
+            这是一些文本。这是一些文本。这是一些文本。这是一些文本。</p>
+        <p class="pre">
+                这是一些文本。这是一些文本。这是一些文本。    这是一些文本。    
+                这是一些文本。                       这是一些文本。 这是一些文本。这是一些文本。
+                这是一些文本。这是一些文本。这是一些文本。 这是一些文本。
+                这是一些文本。这是一些文本。这是一些文本。这是一些文本。
+        </p>
+    </div>
+</body>
+</html>

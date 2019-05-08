@@ -1,0 +1,43 @@
+/* *{
+    margin:0px;
+    padding:0px;
+} */
+
+.H1{
+    border:  1px solid black;
+}
+
+.p1{
+    border: 2px dotted seagreen;
+}
+
+#SomePic p img {
+    vertical-align: top;
+}
+
+.float{
+    float:left;
+}
+
+/* table{
+    float:left;
+} */
+
+#table{
+    height:300px;
+}
+
+#divlayout{
+    padding:0px;
+    margin:0px;
+}
+
+#tablelayout{
+    padding:0px;
+    margin:0px;
+}
+
+#iframe{
+    margin:20px;
+    padding:20px;
+}

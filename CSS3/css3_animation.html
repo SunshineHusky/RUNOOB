@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animation</title>
+    <style>
+    #color{
+        position: relative;
+        width: 100px;
+        height: 70px;
+        background-color: #ff9922;
+        border: 1px solid black;
+        animation: myfirst 10s 100;
+    }
+
+    @keyframes myfirst{
+        /* from {}
+        to{background-color: #b121d4;
+            width: 400px;} */
+        0% {background: red; left:0; top: 0px;}
+        25% {background: yellow; left: 200px; top:200px;}
+        50% {background: blue; left:0; top:200px;}
+        100% {background: green; left:200px; top:0;}
+    }
+    </style>
+</head>
+<body>
+    <div id="color"></div>
+</body>
+</html>

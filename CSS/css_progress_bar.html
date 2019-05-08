@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Progress bar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <style>
+    body{
+        background-color: #e9e5e2;
+    }
+    #skill{
+        list-style-type:none;
+        font:12px "Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
+        width: 296px;
+        margin: 50px auto 0;
+        /*列表中行间距*/
+        position: relative;
+        line-height: 2em;
+        padding: 30px 0;
+    }
+    #skill li{
+        margin-bottom: 50px;
+        background:#e9e5e2;
+        /*创建渐变凹槽*/
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#e1ddd9), to(#e9e5e2));  /*老式语法书写规则*/
+	    background-image: -webkit-linear-gradient(top, #e1ddd9, #e9e5e2);   /*新式语法书写规则*/
+	    background-image: -moz-linear-gradient(top, #e1ddd9, #e9e5e2);      /*Mozilla下书写规则*/
+	    background-image: -ms-linear-gradient(top, #e1ddd9, #e9e5e2);       /*Trident(IE)下书写规则*/
+	    background-image: -o-linear-gradient(top, #e1ddd9, #e9e5e2);        /*opera下书写规则*/
+	    background-image: linear-gradient(to top, #e1ddd9, #e9e5e2);           /*标准语法,必须在最后*/
+        height: 20px;
+        border-radius: 10px;
+        /*创建阴影*/
+        -moz-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;	 
+    	-webkit-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;	 
+    	box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;    /*上方为内部深色阴影,下方为外部白色阴影,有立体效果*/
+    }
+    #skill li h3 { 
+	position:relative; 
+	top:-25px;
+    }
+    .bar { 
+	height:18px; 
+	margin:1px 2px;  
+	position:absolute;
+	border-radius:10px;
+	-moz-box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
+	-webkit-box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;	 
+	box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;		
+    }
+    .graphic-design{
+        width: 100%;
+        animation: graphic-design 2s ease-out;  /*定义动画名称和时长*/
+        background-color: #f674a4;
+	    background-image: linear-gradient(to top, #f674a4, #e06995);
+    }
+    @-moz-keyframes graphic-design {0%  { width:0px;} 100%{ width:100%;}  }
+    @-webkit-keyframes graphic-design       { 0%  { width:0px;} 100%{ width:100%;}  }
+    @keyframes graphic-design       { 0%  { width:0px;} 100%{ width:100%;}  }
+    </style>
+</head>
+<body>
+    <ul id="skill">
+        <li><span class="bar graphic-design"></span><h3>Graphic Design</h3></li>
+        <li><span class="bar html-css"></span><h3>Html // Css</h3></li>
+        <li><span class="bar jquery"></span><h3>Jquery</h3></li>
+        <li><span class="bar wordpress"></span><h3>Wordpress</h3></li>
+    </ul>
+</body>
+</html>

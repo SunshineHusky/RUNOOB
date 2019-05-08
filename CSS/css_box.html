@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>css box</title>
+        <meta http-equiv="X-UA-Comptiable" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" tyle="text/css" href="">
+        <script type="text/script" src=""></script>
+        <style>
+        #box .box_1{
+            margin: 25px;
+            border: 25px solid green;
+            padding: 25px;
+            background-color: lightgrey;
+        }
+
+        #box .box_2{
+            margin: 0px;
+            border: 10px solid black;
+            padding: 15px;
+            width: 200px;
+        }
+        
+        #frame .frame_1{
+            border: 1px dotted green;
+        }
+        #frame .frame_2{
+            border: 1px dashed lightblue;
+        }
+        #frame .frame_3{
+            border:1px solid blue;
+        }
+        #frame .frame_4{
+            border: 5px double lightpink;
+        }
+        #frame .frame_5{
+            border-width: 10px;
+            border-color: pink blue green yellow;
+            border-style: groove;
+        }
+        #frame .frame_6{
+            border-width: 10px;
+            border-color: pink blue green yellow;
+            border-style: inset;
+        }
+        #frame .frame_7{
+            border-width: 10px;
+            border-color: pink blue green yellow;
+            border-style: ridge;
+        }
+        #frame .frame_8{
+            border-width: 10px;
+            border-color: pink blue green yellow;
+            border-style: outset;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>盒子模型演示</h1>
+        <p>CSS盒模型本质上是一个盒子,封装周围的HTML元素,它包括:外边距,边框,内部填充和实际内容</p>
+        <div id="box">
+            <p class="box_1">
+                这里是盒子的实际内容,有25px的外边距,25px的内边距,25px的绿色边框.
+            </p>
+            <p class="box_2">
+                下面图片的宽度为250px宽,本区域内容文字也为250px宽.
+            </p>
+            <img src="images/250x250px.gif" width="250px" height="250px">
+        </div>
+        <dib id="frame">
+            <p class="frame_1">定义一个点线边框.</p>
+            <p class="frame_2">定义一个虚线边框.</p>
+            <p class="frame_3">定义一个实线边框.</p>
+            <p class="frame_4">定义两个边框,两个边框的宽度和border-width有关.</p>
+            <p class="frame_5">定义3D沟槽边框,效果取决于边框的颜色值.</p>
+            <p class="frame_6">定义一个3D嵌入边框,效果取决于边框的颜色值.</p>
+            <p class="frame_7">定义3D脊边框,效果取决于边框的颜色值.</p>
+            <p class="frame_8">定义3D突出边框,效果取决于边框的颜色值.</p>
+        </dib>
+    </body>
+</html>

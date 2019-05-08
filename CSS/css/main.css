@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+    margin: 0;
+}
+
+header{
+    background-color: #1abc9c;
+    text-align: center;
+    color: white;
+    padding: 5em;
+}
+
+/*标题字体加大*/
+header h1{
+    font-size: 2.5em;
+}
+
+/*导航*/
+nav{
+    overflow: hidden;
+    background-color: #333;
+}
+
+/*导航栏样式*/
+nav ul{
+    margin: 0;
+}
+nav ul li{
+    padding: 0;
+    list-style-type: none;
+    float: left;
+}
+nav ul li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1em 3em;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/*右侧链接*/
+nav .right{
+    float:right;
+}
+
+#main{
+    display: flex;
+    flex-wrap: wrap;   /*如果排布不下则换行,响应式布局*/
+}
+
+#main aside{
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 2em;
+}
+
+#main section{
+    flex: 70;
+    background-color: whtie;
+    padding: 2em;
+}
+
+.fakeimg{
+    background-color: #aaa;
+    width: 100%;
+    padding: 1.5em;
+}
+
+footer{
+    text-align: center;
+    padding: 1.5em;
+    background-color: #ddd;
+}
+
+/*响应式布局,屏幕尺寸小于700px时,上下两栏堆叠显示*/
+@media screen and (max-width:700px){
+    #main{
+        flex-direction: column;
+    }
+}
+
+/*响应式布局,屏幕尺寸小于400px,导航栏堆叠显示*/
+@media screen and (max-width:400px){
+    nav ul li{
+        float: none;
+        width: 100%;
+    }
+}

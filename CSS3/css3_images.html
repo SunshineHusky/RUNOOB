@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="X-UA-Comptiable" content="IE=edge">
+        <style>
+        div{
+            margin: 10px;
+        }
+        .image1 img{
+            width: 400px;
+            height: 300px;
+            border-radius: 10px;
+        }
+        .image2 img{
+            width: 400px;
+            height: 300px;
+            border-radius: 50%;
+        }
+        .image3 img{
+            width: 400px;
+            height: 300px;
+            border-radius: 10px;
+            border: 1px solid black;
+            padding: 10px;
+            transition: 1s;
+            position: relative;
+        }
+        .image3 img:hover{
+            box-shadow: 0 0 2px 1px rgba(0, 184,140, 0.5);
+            background: yellowgreen;
+        }
+
+        #myImg{
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        #myImg:hover{
+            opacity: 0.5;
+        }
+        .modal{
+            margin: 0;
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+
+        }
+        .modal-content{
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 800px;
+        }
+        .caption{
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+        
+        /*add a animation*/
+        .modal-content, .caption{
+            animation: zoom;
+            animation-duration: 1s;
+        }
+        @keyframes zoom{
+            from {transform:scale(0.1)}
+            to {transform:scale(1)}
+        }
+
+        /*add a close button*/
+        .close{
+            position: absolute;
+            top: 15px;
+            right: 30px;
+            color: #f1f1f1;
+            font-size: 50px;
+            transition: 0.3s;
+        }
+        .close:hover, .close:focus{
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width:700px){
+            .modal-content{
+                width: 100%;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <div class="image1">
+            <h1>圆角图片</h1>
+            <p>使用border-radius创建圆角图片</p>
+            <img src="images/paris.jpg">
+        </div>
+        <div class="image2">
+            <h1>圆角图片</h1>
+            <p>此圆角图片的圆角比较大</p>
+            <img src="images/paris.jpg">
+        </div>
+        <div class="image3">
+            <h1>缩略图</h1>
+            <p>使用border属性创建缩略图</p>
+            <img src="images/paris.jpg">
+        </div>
+        <div>
+            <h2>图片模态框</h2>
+            <p>本实例演示了如何结合CSS和JS来一起渲染图片.首先,我们使用CSS创建模态窗口,默认是隐藏的.然后,我们用JavaScript来显示模态窗口,当我们点击窗口时候,图片会弹出窗口显示!</p>
+            <img id="myImg" alt="Northern Lights, Norway" src="images/img_lights.jpg">
+            <!-- 模态窗口  -->
+            <div id="myModal" class="modal">
+                <span class="close">X</span>
+                <img class="modal-content" src="images/img_lights.jpg">
+                <div class="caption"></div>
+            </div>
+        </div>
+        <script>
+            function modal(){
+                var modal = document.getElementById("myModal");
+                let img = document.getElementById("myImg");
+                let close =document.getElementsByClassName("close")[0];
+                img.addEventListener("click",function(){
+                    let caption = document.getElementsByClassName("caption")[0];
+                    modal.style.display = "block";
+                    caption.innerHTML = document.getElementById("myImg").alt;
+
+                });
+                close.addEventListener("click",function(){
+                    modal.style.display = "none";
+                })
+                
+            }
+            window.onload = modal();
+        </script>
+    </body>
+</html>

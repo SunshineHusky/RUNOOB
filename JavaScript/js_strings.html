@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        
+    </div>
+    <script>
+    //可以使用单引号及双引号定义字符串string
+    const carname="volvo XC60";
+    const manname='Jhon haz';
+
+    const answer="It's alright";
+    const answer_1='It\'s alright';
+    const answer_2="It's \r al\tright,\nso why \b you \f serious."
+
+    let x = "Jhon";
+    let x_1 = new String("Jhon");
+    let x_2 = "hello world";
+    let x_3 = x_2.toUpperCase();
+    let x_4 = "    Hello world    ";
+    let num = 15;
+    var nul = null;
+
+    let len = answer.length;
+    let len_1 = answer_1.length;
+    console.log(carname[7]);
+    console.log(answer,"answer length is "+len,"\n",answer_1,"answer1_1 length is "+len_1);
+    console.log(answer_2);
+
+    console.log(typeof(x)+"\n"+typeof(x_1));
+    console.log(x==x_1);
+    console.log(x===x_1);
+    console.log(String.fromCharCode(72,69,76,76,79)+ "  fromcharcode是String的静态方法,只能由String调用");
+    console.log("x.indexof(\"n\") == 3 \n 不存在则返回-1",x.indexOf("n"));
+    console.log("x_2为"+x_2,"\n第一次出现的位置indexOf\t"+x_2.indexOf("o"),"\no最后一次出现的位置lastindexOf\t",x_2 .lastIndexOf("o"));
+    console.log("localecompare方法是比较字符串的Unicode编码进行比较,可以使用charCodeAt()方法转换Unicode编码\n",x.localeCompare(x_1),"\t",x.localeCompare(carname));
+    console.log("match用于查找字符串或者正则表达式匹配,返回查找的数组\n","查找字符串:\t"+x_2.match(" "),"\n查找正则表达式:\t"+x_2.match(/\s+/g))
+    console.log("replace用于替换,sarch用于查找元素,并返回下标,找不到返回-1\n",x_2.replace(/\s+/g,","),"\t",x_2.search(/\s+/g))
+    console.log("slice用于提取字符串某部分\n","提取 "+x_2+" 前三个字符"+x_2.slice(0,3),"\n提取 "+x_2+" 后三个字符"+x_2.slice(-3))
+    console.log("split用于分割字符串",x.split(""),"\n"+x_2.split(" "))
+    console.log("substr用于提取指定数目的字符串\n",x_2+" 提取四个字符串\t"+x_2.substr(0,4),"\n提取后四个字符串\t"+x_2.substr(-4,4));
+    console.log("substring用于提取指定索引下标的字符串\n",x_2+" 提取第三个至第7个字符\t"+x_2.substring(2,7))
+    </script>
+</body>
+</html>

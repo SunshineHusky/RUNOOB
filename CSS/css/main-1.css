@@ -1,0 +1,89 @@
+*{
+    /*box-sizing用于模拟盒子模型,兼容某些浏览器*/
+    /*border-box padding和border会包含在内边距中,容易调节元素大小*/
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing: border-box;
+    font-family: Arial;
+}
+
+body{
+    background-color: #555;
+    text-align: center;
+    padding: 0px;
+    margin: 10px;
+}
+
+.pagination{
+    list-style-type: none;
+    display: inline-block;
+}
+.pagination li{
+    display: inline;
+    text-align: center;
+}
+.pagination a{
+    float: left;
+    display: block;
+    font-size: 28px;
+    text-decoration: none;
+    padding: 5px 12px;
+    color: #fff;
+    margin-left: -1px;
+    border: 1px solid transparent;
+    line-height: 1.5em;
+}
+.pagination a.active{
+    cursor: default;
+}
+.pagination a:active{
+    outline: none;
+}
+.modal-1 li:first-child a {
+    -moz-border-radius: 6px 0 0 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px 0 0 6px;
+}
+.modal-1 li:last-child a {
+    -moz-border-radius: 0 6px 6px 0;
+    -webkit-border-radius: 0;
+    border-radius: 0 6px 6px 0;
+}
+.modal-1 a {
+    border-color: #ddd;
+    color: #4285F4;
+    background: #fff;
+}
+.modal-1 a:hover {
+    background: #eee;
+}
+.modal-1 a.active, .modal-1 a:active {
+    border-color: #4285F4;
+    background: #4285F4;
+    color: #fff;
+}
+.modal-2 li:first-child a {
+    -moz-border-radius: 50px 0 0 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px 0 0 50px;
+}
+.modal-2 li:last-child a {
+    -moz-border-radius: 0 50px 50px 0;
+    -webkit-border-radius: 0;
+    border-radius: 0 50px 50px 0;
+}
+.modal-2 a {
+    border-color: #ddd;
+    color: #999;
+    background: #fff;
+}
+.modal-2 a:hover {
+    color: #E34E48;
+    background-color: #eee;
+  }
+.modal-2 a.active, .modal-2 a:active {
+    border-color: #E34E48;
+    background: #E34E48;
+    color: #fff;
+}
+  

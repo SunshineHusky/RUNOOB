@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>css position</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <style>
+    #static .static{
+        position: static;
+        border: 1px solid green;
+    }
+
+    #relative .pos_left{
+        position: relative;
+        left:30px;
+    }
+    #relative .pos_right{
+        position: relative;
+        right: 50px;
+    }
+    #relative .pos_up{
+        position: relative;
+        top:-30px;
+    }
+
+    #absolute .absolute{
+        position: absolute;
+        top:-20px;
+        left:-10px;
+    }
+    #fix .fix{
+        position: fixed;
+        top: 0;
+        /* right:30%; */
+        border: 2px dashed yellow;
+        background-color: green;
+    }
+    p.sticky{
+        position: sticky;
+        top: 0;
+        border: 2px solid black;
+        background: #4caf50;
+    }
+    </style>
+</head>
+<body>
+    </div>
+    <div id="static">
+        <h2>position:static;</h2>
+        <p>使用position:static定位的元素,无特殊定位,遵循正常的文档流.是HTML的默认值.</p>
+        <p class="static">该元素使用了position:static.</p>
+    </div>
+    <div id="relative">
+        <p>这是一个正常的标题</p>
+        <p class="pos_left">这是一个正常偏左移动的标题</p>
+        <p class="pos_right">这是一个正常偏右移动的标题</p>
+        <p class="pos_up">这是一个正常向上移动的标题,占用空间会保留.</p>
+    </div>
+    <div id="absolute">
+        <p>绝对定位元素是相对于最近的父元素进行定位</p>
+        <p class="absolute">此元素相对父元素偏移.</p>
+    </div>
+    <p class="sticky">我是粘性元素,同时具备relative和fixed的效果.</p>
+    <div id="fix">
+        <p class="fix">SOME TEXT</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+    </div>
+</body>
+</html>

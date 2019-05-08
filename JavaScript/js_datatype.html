@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Type</title>
+</head>
+<body>
+    <h1>JavaScript数据类型</h1>
+    <p>JavaScript拥有七种基本数据类型,Number,String,Null,Undefined,Boolean,复杂类型Object,和新增的symbol类型.</p>
+    <div id="value_type">
+        <p>Number: 15,20,25,30 </p>
+        <button id="num">数字</button>
+        <p>String: "Sam", "中国", "15"</p>
+        <button id="str">字符串</button>
+        <p>Null</p>
+        <button id="nul">Null</button>
+        <p>Undefined</p>
+        <button id="udf">Undefined</button>
+        <p>Boolean: True , False</p>
+        <button id="bol">Boolean</button>
+        <p>Object: Array, function, Object</p>
+        <button id="obj">Object</button>
+        <p>symbol: symbol("Sam")</p>
+        <button id="sym">Symbol</button>
+    </div>
+    <script>
+        const num1 = 1000;
+        const num2 = 10e5;
+        const num3 = 10e-5;
+        const carname = "Volvo";
+        const nul = null;
+        const udf = undefined;
+        const bol_1 = true;
+        const bol_2 = false;
+        const obj = {
+            obj:{
+                name: "Jhon",
+                age: 25,
+            },
+            arr:[15,20,25,30],
+            func:function(){
+                for (x in obj){
+                    console.log(x);
+                    console.log(obj.x);
+                }
+            }
+        };
+        var sym = Symbol("Sam He");
+
+        window.onload = function(){
+            var x = document.getElementsByTagName("button");
+            for(let i=0; i<x.length; i++){
+                x[i].onclick = function(){
+                    myfunction(this.id)
+                }
+            }
+        }
+
+        function myfunction(val){
+            let x = val.replace(/\s+/g,"").substr(0,3);
+            switch (x){
+                case "num":
+                alert(num1);
+                alert(num2);
+                alert(num3);
+                break;
+                case "str":
+                alert(carname);
+                break;
+                case "nul":
+                alert(nul);
+                break;
+                case "udf":
+                alert(udf);
+                break;
+                case "bol":
+                alert(bol_1);
+                alert(bol_2);
+                break;
+                case "sym":
+                console.log(sym);
+                break;
+                case "obj":{
+                    alert(obj.obj.name);
+                    alert(obj.arr);
+                    obj.func();
+                }
+                break
+                default:
+                return console.log("此元素不是button");
+            }
+            return console.log("执行完毕")
+        }
+
+        
+    </script>
+</body>
+</html>

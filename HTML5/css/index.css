@@ -1,0 +1,20 @@
+
+/*教会旧版浏览器识别新元素*/
+header,section,aside,footer,nav,main,article,figure{
+    display:block;
+}
+
+/*新元素样式*/
+myHero{
+    display: block;
+    background-color:#ddd;
+    padding:50px;
+    font-size:30px;
+}
+
+#drop,#drop1{
+    width:350px;
+    height:100px;
+    padding:10px;
+    border:1px solid #aaa;
+}
