@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>REG</title>
+</head>
+<body>
+    <h1>正则表达式</h1>
+    <p>/正则表达式主体/修饰符</p>
+    <div id="demo1">
+        <p>Welcome to the Microsoft!</p>
+        <button id="btn1">点击</button>
+    </div>
+    <script>
+        let patt = /runoob/i;
+        let str = "Welcome to runoob!";
+        let n = str.search(patt);
+        console.log(n);
+
+        function demo1(){
+            var para = document.getElementById("demo1").children[0];
+            var btn = document.getElementById("btn1");
+            btn.addEventListener("click",function(){
+                let txt = para.innerHTML.replace(/Microsoft/g,"Runoob");
+                para.innerHTML = txt;
+            })
+        }
+
+        function demo2(){
+            let patt1 = RegExp("e");
+            let patt2 = RegExp(/\d+/g);
+            let str = "My gradfather is 80 years old, and he si born 1949."
+            console.log(patt1.test("The best thing in life is free!"));
+            console.log(/s/.test("The best thing in life is free!"));
+            console.log(patt2.exec("My gradfather is 80 years old, and he si born 1949."))
+            console.log(str.match(/\S+/g))
+        }
+
+        function addLoadEvent(func){
+            var oldonload = window.onload;
+            if(typeof window.onload != "function"){
+                window.onload = func;
+            }else{
+                window.onload = function(){
+                    oldonload();
+                    func();
+                }
+            }
+        }
+        
+        addLoadEvent(demo1);
+        addLoadEvent(demo2)
+    </script>
+</body>
+</html>
