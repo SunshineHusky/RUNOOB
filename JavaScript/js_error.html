@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Error</title>
+</head>
+<body>
+    <div id="content">
+    <p>不论输入是否正确,输入框之后都会清空.</p>
+    <p>请输入5-10之间的数字</p>
+    <input id="demo">
+    <button id="demo1">点我</button>
+    <p id="p_01"></p>
+    </div>
+    <script>
+        function message(){
+            let txt="";
+            try{
+                adddlert("welcome Runoob");
+            }catch(err){
+                txt = "本页有一个错误.\n\n";
+                txt += "错误描述:" + err.message + "\n\n";
+                txt += "点击确定继续.\n\n";
+                alert(txt);
+            }finally{
+                let para = document.getElementById("content");
+                para.innerHTML = "<h1>这里无论如何都会执行</h1>";
+            }
+        }
+
+        function NumberValid(){
+            let para_1 = document.getElementById("p_01");
+            let input_1 = document.getElementById("demo");
+            let btn = document.getElementById("demo1");
+            btn.addEventListener("click",function(){
+                para_1.innerHTML = "";
+                let x = input_1.value;
+                try{
+                    if(x == "") throw "值是空的";
+                    if(isNaN(x)) throw "值不是一个数字";
+                    x = Number(x);
+                    if(x >10){
+                        throw "值太大";
+                    }else{
+                        throw "值太小";
+                    }
+                }catch(err){
+                    console.log(err.message);
+                    para_1.innerHTML = "错误:\t"+err+".";
+                }finally{
+                    input_1.value = "";
+                }
+            })
+        }
+
+        function addLoadEvent(func){
+            let oldonload = window.onload;
+            if(typeof window.onload != "function"){
+                window.onload = func;
+            }else{
+                window.onload = function(){
+                    oldonload();
+                    func();
+                }
+            }
+        }
+
+        // addLoadEvent(message);
+        addLoadEvent(NumberValid);
+    </script>
+</body>
+</html>
