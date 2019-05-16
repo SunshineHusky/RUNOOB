@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validation API</title>
+</head>
+
+<body>
+    <div>
+        <input id="id1" type="number" min="100" max="300" required>
+        <button onclick="myFunction()">验证</button>
+        <p>如果输入的数字小于 100 或大于300，会提示错误信息。</p>
+        <p id="demo"></p>
+    </div>
+    <div>
+        <h2>使用validty的属性来进行自定义验证</h2>
+        <input id="id2" type="number" min="100" required>
+        <button onclick="myFunction_2()">点击</button>
+        <p id="demo2"></p>
+    </div>
+    <script>
+        function myFunction() {
+            var inObj = document.getElementById("id1");
+            if (inObj.checkValidity() == false) {
+                document.getElementById("demo").innerHTML = inObj.validationMessage;
+            }
+        }
+
+        function myFunction_2(){
+            var inObj_2 = document.getElementById("id2");
+            var txt = "";
+            if(inObj_2.validity.rangeUnderflow){
+                txt = "输入的值太小了";
+            }else{
+                txt = "输入正确";
+            }
+            document.getElementById("demo2").innerHTML = txt;
+        }
+    </script>
+</body>
+
+</html>
