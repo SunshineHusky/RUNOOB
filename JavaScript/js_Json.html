@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Json</title>
+    <style>
+    #table_1{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    td,th{
+        margin: 0;
+        padding: 15px;
+        border: 1px solid black;
+        width: 10%;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <p>网站名称: <span id="jname"></span></p>
+        <p>网站地址: <span id="jaddress"></span></p>
+        <p>网站 slogan: <span id="jsolgan"></span></p>
+        <table id="table_1">
+            <tr>
+                <th>名称</th>
+                <th>网址</th>
+            </tr>
+            <tr class="data_1">
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="data_2">
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="data_3">
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <br>
+        <p>点击下方按钮则可以表格内填充数据</p>
+        <button id="btn">点击</button>
+    </div>
+    <div>
+        <p>点击按钮可以使用ajax来进行刷新数据</p>
+        <button id="btn_2">点击</button>
+        <p id="demo_1">初始数据</p>
+    </div>
+    <script src="js/Json.js"></script>
+</body>
+</html>
