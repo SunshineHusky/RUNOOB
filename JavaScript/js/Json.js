@@ -9,6 +9,22 @@ var JSONObject = {
     ]
 };
 
+var text = '{"name" : "Runoob", "initDate" : "2013-12-24", "site" : "www.runoob.com", "alexa" : "()=>10000"}'
+var obj = JSON.parse(text);
+obj.initDate = new Date(obj.initDate)       //将日期转换为Date对象
+var obj_2 = JSON.parse(text,function(key,value){
+    if(key == "initDate"){
+        return new Date(value);
+    }else{
+        return value;
+    }
+})
+
+var obj_3 = {name: "Google", site: "www.google.com", alexa : 99999}
+var myJson = JSON.stringify(obj_3);
+
+var func_1 = eval(obj.alexa)();  //执行函数
+
 document.getElementById("jname").innerHTML = JSONObject.name;
 document.getElementById("jaddress").innerHTML = JSONObject.url;
 document.getElementById("jsolgan").innerHTML = JSONObject.solgan;
@@ -33,11 +49,19 @@ function Render(){
 
 function Demo1(){
     let xmlhttp = new XMLHttpRequest();
+    let x = "";
     xmlhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
             console.log(this.responseText);
             myObj = JSON.parse(this.responseText);
-            document.getElementById("demo_1").innerHTML = myObj.name;
+            // document.getElementById("demo_1").innerHTML = myObj.name;
+            for(i in myObj.sites){
+                x += "<h1>" + myObj.sites[i].name + "</h1>";
+                for( j in myObj,sites[i].info){
+                    x+= "<p>" + myObj.sites[i].info[j] + "</p>";
+                }
+            }
+            document.getElementById("demo_1").innerHTML = x;
         }
     }
     xmlhttp.open("GET","https://localhost/try/ajax/json_demo.txt",true);
